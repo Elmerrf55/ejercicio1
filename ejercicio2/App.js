@@ -132,24 +132,24 @@ const App = () => {
         data={alumno}
         renderItem={({ item }) => (
           <TouchableOpacity
-            style={styles.clienteItem}
+            style={styles.AlumnoItem}
           >
  
             {/* Muestra el ID, nombre y fecha de reserva del cliente */}
  
             <View style={styles.conte}>
-              <Text style={styles.clienteNombre}>{item.id}</Text>
+              <Text style={styles.nombreAlumno}>{item.id}</Text>
               <TouchableOpacity
               style={styles.buttonEliminar}
                 onPress={() => eliminarAlumno(item.id)}>
-                <Text style={styles.clienteNombre}>X</Text>
+                <Text style={styles.nombreAlumno}>X</Text>
               </TouchableOpacity>
             </View>
  
-            <Text style={styles.clienteNombre}>{item.nombre}</Text>
-            <Text style={styles.clienteNombre}>{item.carnet}</Text>
-            <Text style={styles.clienteNombre}>{item.colorFav}</Text>
-            <Text style={styles.clienteFecha}>
+            <Text style={styles.nombreAlumno}>{item.nombre}</Text>
+            <Text style={styles.nombreAlumno}>{item.carnet}</Text>
+            <Text style={styles.nombreAlumno}>{item.colorFav}</Text>
+            <Text style={styles.FechaAlumno}>
               Fecha de nacimiento: {item.fechaReserva.toDateString()}
             </Text>
  
@@ -188,18 +188,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingHorizontal: 10,
   },
-  clienteItem: {
+  AlumnoItem: {
     backgroundColor: '#f0f0f0',
     padding: 10,
     marginBottom: 10,
     borderRadius: 5,
     marginTop: 5
   },
-  clienteNombre: {
+  nombreAlumno: {
     fontSize: 18,
     fontWeight: 'bold',
   },
-  clienteFecha: {
+  FechaAlumno: {
     fontSize: 16,
   },
   conte: {
